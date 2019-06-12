@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
 
   return (
     <main className="black-90 sans-serif f6 f4-m f3-l measure-wide center">
-      <header className="pt3 mb2 mb5-l ph1">
+      <header className="pt3 mb2 mb5-l ph2">
         <h1 className="mv0 f6 f4-ns flex items-center">
           <a href="/" className="flex-none btn flex items-center fw4">
             <Image fixed={logo.childImageSharp.fixed} className="mr2" />
