@@ -1,8 +1,14 @@
 @import '@mikker/btn/src/btn';
 @import 'tachyons/src/tachyons';
+@import '../fonts/TiemposHeadline/all';
 
 html { box-sizing: border-box }
 *, *:before, *:after { box-sizing: inherit }
+
+.tiempos-headline {
+  font-family: 'Tiempos Headline Embedded', 'Georgia', serif;
+  font-display: swap;
+}
 
 body {
   margin: 0;

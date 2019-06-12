@@ -1,8 +1,11 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import Image from 'gatsby-image'
 import { ArrowUpRight } from 'react-feather'
+import tiemposBoldPath from '../fonts/TiemposHeadline/TiemposHeadline-Bold.woff2'
+import tiemposRegularPath from '../fonts/TiemposHeadline/TiemposHeadline-Regular.woff2'
 
 import './layout.css'
 
@@ -27,6 +30,20 @@ const Layout = ({ children }) => {
 
   return (
     <main className="black-90 sans-serif f6 f4-m f3-l measure-wide center">
+      <Helmet>
+        <link
+          rel="preload"
+          href={tiemposRegularPath}
+          as="font"
+          type="font/woff2"
+        />
+        <link
+          rel="preload"
+          href={tiemposBoldPath}
+          as="font"
+          type="font/woff2"
+        />
+      </Helmet>
       <header className="pt3 mb2 mb5-l ph2">
         <h1 className="mv0 f6 f4-ns flex items-center">
           <a href="/" className="flex-none btn flex items-center fw4">
@@ -38,7 +55,7 @@ const Layout = ({ children }) => {
           <div className="flex-auto" />
           <a
             href="https://10er.app"
-            className="flex-none btn f7 f6-ns fw5 flex items-center shadow-4 mr2"
+            className="flex-none btn bg-white f7 f6-ns fw5 flex items-center shadow-4 mr2"
           >
             <ArrowUpRight className="bg-black-30 white icon mr1 mr2-l br1" />
             Go to 10er

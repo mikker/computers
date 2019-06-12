@@ -20,7 +20,7 @@ export default function PageTemplate({ data: { mdx, site }, pageContext }) {
       <section className="ph3">
         <article className="measure-wide">
           <header className="lh-title mv4">
-            <h1 className="mb0">
+            <h1 className="mb0 tiempos-headline fw3">
               <Link to={mdx.fields.slug} className="link blue lh-title">
                 {mdx.frontmatter.title}
               </Link>
