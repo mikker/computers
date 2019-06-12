@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
               <strong className="fw7">10er</strong> blog
             </div>
           </a>
-          <div className='flex-auto' />
+          <div className="flex-auto" />
           <a
             href="https://10er.app"
             className="flex-none btn f7 f6-ns fw5 flex items-center shadow-4 mr2"
