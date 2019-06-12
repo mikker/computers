@@ -79,10 +79,10 @@ module.exports = {
         name: '10er',
         short_name: '10er',
         start_url: '/',
-        background_color: '#001724',
-        theme_color: '#001724',
+        background_color: '#324ccd',
+        theme_color: '#324ccd',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/heart-coin-w1024.png', // This path is relative to the root of the site.
       },
     },
     // `gatsby-plugin-typescript`,
