@@ -7,11 +7,11 @@ import { formatPostDate, formatReadingTime } from '../utils/dates'
 const BlogIndexPage = ({ data: { allMdx } }) => (
   <Layout>
     <div className="mt4 ph3">
-      <h2 className='mb3'>Archive</h2>
+      <h2 className='f5 f4-ns mb3'>Archive</h2>
       {allMdx.nodes.map(post => (
         <div key={post.fields.slug} name={post.fields.slug}>
           <Link to={post.fields.slug} className="link blue lh-title db mb3">
-            <strong>{post.frontmatter.title}</strong>
+            <strong className='f4 f3-m f2-l'>{post.frontmatter.title}</strong>
             <div className="black-50 mt0 f5-ns">{formatPostDate(post.frontmatter.date)}</div>
           </Link>
         </div>
