@@ -1,40 +1,35 @@
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
+const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
 
-  if (node.internal.type === 'Mdx') {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: 'slug',
-      node,
-      value,
-    })
+  if (node.internal.type === "Mdx") {
+    const path = createFilePath({ node, getNode });
 
     createNodeField({
-      name: 'published',
+      name: "slug",
       node,
-      value: node.frontmatter.published,
-    })
+      value: `/issues${path}`
+    });
   }
-}
+};
 
 exports.createPages = ({ graphql, actions, reporter, pathPrefix }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   return graphql(
     `
       {
-        allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMdx(sort: { fields: [frontmatter___published_on], order: DESC }) {
           edges {
             node {
               id
               fields {
                 slug
-                published
               }
               frontmatter {
                 title
+                issue
               }
             }
           }
@@ -44,34 +39,27 @@ exports.createPages = ({ graphql, actions, reporter, pathPrefix }) => {
   ).then(result => {
     if (result.errors && result.errors.length) {
       if (result.errors.length === 1) {
-        throw new Error(result.errors[0])
+        throw new Error(result.errors[0]);
       }
 
       result.errors.forEach(error => {
-        reporter.error('Error while querying the mdx', error)
-      })
+        reporter.error("Error while querying the mdx", error);
+      });
 
-      throw new Error('See errors above')
+      throw new Error("See errors above");
     }
 
-    const posts = result.data.allMdx.edges
+    const posts = result.data.allMdx.edges;
     // We'll call `createPage` for each result
     posts.forEach(({ node }, index) => {
-      let previous = index === posts.length - 1 ? null : posts[index + 1].node
-      let next = index === 0 ? null : posts[index - 1].node
-
-      if (previous && !previous.fields.published) {
-        previous = null
-      }
-      if (next && !next.fields.published) {
-        next = null
-      }
+      let previous = index === posts.length - 1 ? null : posts[index + 1].node;
+      let next = index === 0 ? null : posts[index - 1].node;
 
       createPage({
         path: `${pathPrefix}${node.fields.slug}`,
         component: path.resolve(`./src/templates/blog-post.js`),
-        context: { id: node.id, previous, next },
-      })
-    })
-  })
-}
+        context: { id: node.id, previous, next }
+      });
+    });
+  });
+};

@@ -9,6 +9,7 @@
     "@mdx-js/react": "^1.0.16",
     "@mikker/btn": "^1.1.1",
     "@weknow/gatsby-remark-twitter": "^0.2.1",
+    "change-case": "^3.1.0",
     "gatsby": "^2.4.2",
     "gatsby-image": "^2.1.1",
     "gatsby-mdx": "^0.6.3",
@@ -35,21 +36,20 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-feather": "^1.1.6",
+    "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
     "tachyons": "^4.11.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.13.0",
-    "lighthousebot": "git+https://github.com/GoogleChromeLabs/lighthousebot.git",
-    "lint-staged": "^8.1.7",
+    "lint-staged": "^9.2.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.17.0",
     "wait-for-netlify-preview": "^1.2.1"
@@ -68,11 +68,5 @@
     "start": "npm run dev",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "prettier": {
-    "proseWrap": "never",
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "semi": false
   }
 }

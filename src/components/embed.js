@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import React from 'react'
+import React from "react";
 
 function Embed({ height, width, src }) {
   return (
@@ -11,7 +11,7 @@ function Embed({ height, width, src }) {
       />
       <iframe src={src} allowFullScreen frameBorder={0} />
     </div>
-  )
+  );
 }
 
-export default Embed
+export default Embed;

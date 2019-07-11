@@ -1,6 +1,6 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Image from "gatsby-image";
 
 function Bio() {
   const { site, avatar } = useStaticQuery(
@@ -27,28 +27,28 @@ function Bio() {
         }
       }
     `
-  )
+  );
 
-  const { author, social } = site.siteMetadata
+  const { author, social } = site.siteMetadata;
 
   return (
     <div
       style={{
-        display: 'flex',
-        marginBottom: '4.375rem',
+        display: "flex",
+        marginBottom: "4.375rem"
       }}
     >
       <Image
         fixed={avatar.childImageSharp.fixed}
         alt={author}
         style={{
-          marginRight: '0.875rem',
+          marginRight: "0.875rem",
           marginBottom: 0,
           minWidth: 50,
-          borderRadius: '100%',
+          borderRadius: "100%"
         }}
         imgStyle={{
-          borderRadius: '50%',
+          borderRadius: "50%"
         }}
       />
       <p style={{ margin: 0 }}>
@@ -60,7 +60,7 @@ function Bio() {
         ) : null}
       </p>
     </div>
-  )
+  );
 }
 
-export default Bio
+export default Bio;

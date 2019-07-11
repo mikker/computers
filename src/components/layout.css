@@ -1,18 +1,24 @@
-@import '@mikker/btn/src/btn';
-@import 'tachyons/src/tachyons';
-@import '../fonts/TiemposHeadline/all';
+@import "@mikker/btn/src/btn";
+@import "tachyons/src/tachyons";
+@import "../fonts/TiemposHeadline/all";
 
-html { box-sizing: border-box }
-*, *:before, *:after { box-sizing: inherit }
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 .tiempos-headline {
-  font-family: 'Tiempos Headline Embedded', 'Georgia', serif;
+  font-family: "Tiempos Headline Embedded", "Georgia", serif;
   font-display: swap;
 }
 
 body {
   margin: 0;
-  background: var(--washed-yellow);
+  background: white;
 }
 
 hr {
@@ -22,22 +28,56 @@ hr {
   margin: var(--spacing-large) 0;
 }
 
-.nested-links a:link {
+.nested-links a {
   text-decoration: none;
   box-shadow: inset 0 -2px var(--black-10);
+  transition: all 0.1s linear;
+}
+
+.nested-links a:link {
+  color: var(--black);
+}
+
+.nested-links a:visited {
+  color: var(--purple);
+}
+
+.nested-links a:hover {
+  box-shadow: inset 0 -2px var(--black-80);
 }
 
 .icon {
   width: 1em;
   height: 1em;
   vertical-align: middle;
+  top: -0.1em;
+  position: relative;
 }
 
 .anchor {
   display: none;
 }
 
+.pinkish {
+  color: #ff2076;
+}
+.bg-pinkish {
+  background-color: #ff2076;
+}
+.b--pinkish {
+  border-color: #ff2076;
+}
+
+.hover-pinkish:hover,
+.hover-pinkish:focus {
+  color: #ff2076;
+}
+
+.hover-bg-pinkish:hover,
+.hover-bg-pinkish:focus {
+  background-color: #ff2076;
+}
+
 :root {
-  --blue: #015eb8;
-  --washed-yellow: #fffcef;
+  --purple: rebeccapurple;
 }

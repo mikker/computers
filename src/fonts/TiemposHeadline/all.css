@@ -32,9 +32,10 @@
 /* } */
 
 @font-face {
-  font-family:'Tiempos Headline Embedded';
-  src: url('../fonts/TiemposHeadline/TiemposHeadline-Bold.woff2') format('woff2'),
-  url('../fonts/TiemposHeadline/TiemposHeadline-Bold.woff') format('woff');
+  font-family: "Tiempos Headline Embedded";
+  src: url("../fonts/TiemposHeadline/TiemposHeadline-Bold.woff2")
+      format("woff2"),
+    url("../fonts/TiemposHeadline/TiemposHeadline-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
@@ -98,9 +99,10 @@
 /* } */
 
 @font-face {
-  font-family:'Tiempos Headline Embedded';
-  src: url('../fonts/TiemposHeadline/TiemposHeadline-Regular.woff2') format('woff2'),
-  url('../fonts/TiemposHeadline/TiemposHeadline-Regular.woff') format('woff');
+  font-family: "Tiempos Headline Embedded";
+  src: url("../fonts/TiemposHeadline/TiemposHeadline-Regular.woff2")
+      format("woff2"),
+    url("../fonts/TiemposHeadline/TiemposHeadline-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
