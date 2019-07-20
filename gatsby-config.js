@@ -27,10 +27,6 @@ module.exports = {
       resolve: "gatsby-mdx",
       options: {
         extensions: [".md", ".mdx"],
-        globalScope: `
-          import Tweet from '${__dirname}/src/components/tweet'
-          export default { Tweet }
-        `,
         gatsbyRemarkPlugins: [
           // "gatsby-remark-numbered-footnotes",
           {
