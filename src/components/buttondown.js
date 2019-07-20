@@ -40,7 +40,7 @@ export default ({ color, ...props }) => {
             defaultValue=""
             name="email"
             id="bd-email"
-            className={`br2 pa2 ba bw1 b--${color} w-100 br--left`}
+            className={`input b--${color} w-100 br--left`}
             placeholder={placeholder}
           />
         </div>

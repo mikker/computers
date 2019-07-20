@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, graphql } from "gatsby";
 import MDXRenderer from "gatsby-mdx/mdx-renderer";
 import { MessageSquare, ArrowLeft, ArrowRight } from "react-feather";
@@ -17,9 +17,22 @@ export default function PageTemplate({ data: { mdx, site }, pageContext }) {
     <Layout>
       <SEO title={mdx.frontmatter.title} />
 
+      <header className="mh3 lh-copy flex bg-near-white gray">
+        <Link to="/" className="flex items-center bg-light-gray pa2">
+          <ArrowLeft className="icon" />
+        </Link>
+        <div className="pv2 ph3 f6 fw4">
+          Du er landet på et eksemplar af nyhedsbrevet{" "}
+          <Link to="/" className="link">
+            COMPUTERS
+          </Link>{" "}
+          af <a href="https://mikkelmalmberg.com">Mikkel Malmberg</a>
+        </div>
+      </header>
+
       <section className="ph3">
-        <article className="measure-wide">
-          <div className="nested-copy-line-height nested-links">
+        <article className="w-100">
+          <div className="nested-headline-line-height nested-copy-line-height nested-links">
             <MDXRenderer components={{ Embed }}>{mdx.code.body}</MDXRenderer>
           </div>
         </article>
@@ -36,8 +49,10 @@ export default function PageTemplate({ data: { mdx, site }, pageContext }) {
           </a>
 
           <div className="pa3 pa4-l f4-l bg-near-white mv4 br3 lh-copy f6">
-            <h3 className="mt0 mb1">Kunne du lide, hvad du læste?</h3>
-            <p className="mt0">
+            <h3 className="sans-serif mt0 mb1">
+              Kunne du lide, hvad du læste?
+            </h3>
+            <p className="mt0 f4">
               Modtag et mindst lige så lækkert brev <del>hver fredag</del>{" "}
               (næsten) <strong>hver uge</strong>:
             </p>
