@@ -4,7 +4,7 @@ import Image from "gatsby-image";
 
 import SEO from "../components/seo";
 import Layout from "../components/layout";
-import Buttondown, { generateRandomEmail } from "../components/Buttondown";
+import Buttondown, { generateRandomEmail } from "../components/buttondown";
 import { formatPostDate, formatReadingTime } from "../utils/dates";
 
 const BlogIndexPage = ({ data: { allMdx, avatar } }) => {

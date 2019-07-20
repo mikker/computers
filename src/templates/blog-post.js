@@ -6,7 +6,7 @@ import { MessageSquare, ArrowLeft, ArrowRight } from "react-feather";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Embed from "../components/embed";
-import Buttondown from "../components/Buttondown";
+import Buttondown from "../components/buttondown";
 import { formatPostDate, formatReadingTime } from "../utils/dates";
 
 export default function PageTemplate({ data: { mdx, site }, pageContext }) {
