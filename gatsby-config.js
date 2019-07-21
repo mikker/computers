@@ -28,7 +28,6 @@ module.exports = {
       options: {
         extensions: [".md", ".mdx"],
         gatsbyRemarkPlugins: [
-          // "gatsby-remark-numbered-footnotes",
           {
             resolve: "gatsby-remark-images",
             options: {
@@ -45,7 +44,7 @@ module.exports = {
               wrapperStyle: ""
             }
           },
-          "gatsby-remark-autolink-headers",
+        //   "gatsby-remark-autolink-headers",
           "gatsby-remark-smartypants",
           "gatsby-remark-external-links",
           require.resolve("./plugins/twitter-embeds"),
@@ -53,7 +52,8 @@ module.exports = {
             resolve: `gatsby-remark-figure-caption`,
             options: { figureClassName: "post-figure" }
           }
-        ]
+        ],
+        remarkPlugins: [require("./plugins/numbered-footnotes")]
       }
     },
     {

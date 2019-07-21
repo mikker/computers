@@ -42,8 +42,8 @@ const BlogIndexPage = ({ data: { allMdx, avatar } }) => {
         </p>
       </header>
 
-      <section className="mh3 pa3 pa4-l bg-near-white br3 mv4">
-        <h3 className="sans-serif mt1 black-80 tc-l">
+      <section className="mh3 pa3 pa4-ns bg-near-white br3 mv4">
+        <h3 className="sans-serif mt1 black-80 tc-ns">
           Slut dig til <span className="black">{memberCount || "…"} andre</span>{" "}
           på en rejse for livet
         </h3>

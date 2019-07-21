@@ -18,7 +18,7 @@ export default function PageTemplate({ data: { mdx, site }, pageContext }) {
       <SEO title={mdx.frontmatter.title} />
 
       <header className="mh3 lh-copy flex bg-near-white gray">
-        <Link to="/" className="flex items-center bg-light-gray pa2">
+        <Link to="/" className="pinkish flex items-center bg-light-gray pa2">
           <ArrowLeft className="icon" />
         </Link>
         <div className="pv2 ph3 f6 fw4">
@@ -26,7 +26,7 @@ export default function PageTemplate({ data: { mdx, site }, pageContext }) {
           <Link to="/" className="link">
             COMPUTERS
           </Link>{" "}
-          af <a href="https://mikkelmalmberg.com">Mikkel Malmberg</a>
+          af <a href="https://mikkelmalmberg.com" className='link'>Mikkel Malmberg</a>
         </div>
       </header>
 

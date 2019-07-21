@@ -34,7 +34,7 @@ const Layout = ({ className, children }) => {
 
   return (
     <main
-      className={cn("f4-m f4-l black-80 fira-code fw3 measure-wide center", className)}
+      className={cn("f4-m f4-l black-80 fira-code fw3-ns measure-wide center", className)}
     >
       <Helmet>
         <link
