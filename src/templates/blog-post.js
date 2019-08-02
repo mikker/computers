@@ -52,7 +52,7 @@ export default function PageTemplate({ data: { mdx, site }, pageContext }) {
             <h3 className="sans-serif mt0 mb1">
               Kunne du lide, hvad du læste?
             </h3>
-            <p className="mt0 f4">
+            <p className="mt0 f4-l">
               Modtag et mindst lige så lækkert brev <del>hver fredag</del>{" "}
               (næsten) <strong>hver uge</strong>:
             </p>
