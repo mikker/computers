@@ -113,6 +113,13 @@ const BlogIndexPage = ({ data: { allMdx, avatar } }) => {
             </a>
           </cite>
         </Quote>
+
+        <Quote>
+          "[…] den eneste maillingliste der giver noget værdifuldt"
+          <cite>
+            &mdash; <a href="https://twitter.com/esbenab">@esbenab</a>
+          </cite>
+        </Quote>
       </div>
 
       <div className="mt4 ph3">
