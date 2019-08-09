@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, graphql } from "gatsby";
-import MDXRenderer from "gatsby-mdx/mdx-renderer";
+import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer";
 import { MessageSquare, ArrowLeft, ArrowRight } from "react-feather";
 
 import Layout from "../components/layout";
@@ -33,7 +33,7 @@ export default function PageTemplate({ data: { mdx, site }, pageContext }) {
       <section className="ph3">
         <article className="w-100">
           <div className="nested-headline-line-height nested-copy-line-height nested-links">
-            <MDXRenderer components={{ Embed }}>{mdx.code.body}</MDXRenderer>
+            <MDXRenderer components={{ Embed }}>{mdx.body}</MDXRenderer>
           </div>
         </article>
 
@@ -92,6 +92,7 @@ export const pageQuery = graphql`
       }
     }
     mdx(id: { eq: $id }) {
+      body
       fields {
         slug
       }
@@ -99,9 +100,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         published_on(formatString: "MMMM DD, YYYY")
-      }
-      code {
-        body
       }
     }
   }

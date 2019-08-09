@@ -1,4 +1,4 @@
-const mdxFeed = require("gatsby-mdx/feed");
+const mdxFeed = require("gatsby-plugin-mdx/feed");
 
 const configuration = {
   // the name of your website
@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-mdx",
+      resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [".md", ".mdx"],
         gatsbyRemarkPlugins: [
