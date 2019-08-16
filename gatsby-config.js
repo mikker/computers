@@ -22,6 +22,7 @@ const configuration = {
 module.exports = {
   siteMetadata: configuration,
   plugins: [
+    'gatsby-plugin-simple-analytics',
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-mdx",
