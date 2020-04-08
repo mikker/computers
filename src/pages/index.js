@@ -12,7 +12,7 @@ const BlogIndexPage = ({ data: { allMdx, avatar } }) => {
   const [randomEmail, _] = useState(generateRandomEmail());
 
   useEffect(() => {
-    fetch("https://computers-stats.now.sh")
+    fetch("https://computers-stats.now.sh/api/")
       .then(resp => resp.json())
       .then(stats => setMemberCount(stats.member_count));
   });
