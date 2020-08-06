@@ -6,11 +6,6 @@ import PropTypes from "prop-types";
 import Image from "gatsby-image";
 import { ArrowUpRight } from "react-feather";
 import cn from "classnames";
-import firaCodeLight from '../fonts/FiraCode/woff2/FiraCode-Light.woff2'
-import firaCodeRegular from '../fonts/FiraCode/woff2/FiraCode-Regular.woff2'
-import firaCodeMedium from '../fonts/FiraCode/woff2/FiraCode-Medium.woff2'
-import firaCodeBold from '../fonts/FiraCode/woff2/FiraCode-Bold.woff2'
-
 import "./layout.css";
 
 const Layout = ({ className, children }) => {
@@ -34,35 +29,8 @@ const Layout = ({ className, children }) => {
 
   return (
     <main
-      className={cn("f4-m f4-l black-80 fira-code measure-wide center", className)}
+      className={cn("sans-serif f4-m f4-l black-80 measure-wide center", className)}
     >
-      <Helmet>
-        <link
-          rel="preload"
-          href={firaCodeLight}
-          as="font"
-          type="font/woff2"
-        />
-        <link
-          rel="preload"
-          href={firaCodeRegular}
-          as="font"
-          type="font/woff2"
-        />
-        <link
-          rel="preload"
-          href={firaCodeMedium}
-          as="font"
-          type="font/woff2"
-        />
-        <link
-          rel="preload"
-          href={firaCodeBold}
-          as="font"
-          type="font/woff2"
-        />
-      </Helmet>
-
       <header className="pv3">
         <h1 className="f6">
           <a href="/" className="dib dim">

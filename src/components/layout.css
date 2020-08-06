@@ -1,7 +1,6 @@
 @import "@mikker/btn/src/btn";
 @import "@mikker/input/src/input";
 @import "tachyons/src/tachyons";
-@import "../fonts/FiraCode/fira_code";
 
 html {
   box-sizing: border-box;
@@ -10,11 +9,6 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-.fira-code {
-  font-family: 'Fira Code Embedded';
-  font-display: swap;
 }
 
 .measure-wide {
@@ -53,12 +47,12 @@ a.link:link,
 
 a.link:visited,
 .nested-links a:visited {
-  color: var(--purple);
+  color: var(--gray);
 }
 
 a.link:hover,
 .nested-links a:hover {
-  box-shadow: inset 0 -2px var(--black-80);
+  box-shadow: inset 0 -2px var(--purple);
 }
 
 .icon {

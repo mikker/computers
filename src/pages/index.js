@@ -22,11 +22,11 @@ const BlogIndexPage = ({ data: { allMdx, avatar } }) => {
       <SEO title={`COMPUTERS – Et nyhedsbrev af Mikkel Malmberg`} />
 
       <header className="ph3 lh-copy">
-        <p className="p3">
+        <p className="p3 f3">
           <Link href="/" className="link">
             COMPUTERS
           </Link>{" "}
-          er et (stort set) ugentligt nyhedsbrev af <br />
+          er et (<del>stort set</del>på ingen måder) ugentligt nyhedsbrev af{" "}
           <a href="https://mikkelmalmberg.dk">
             <Image
               fixed={avatar.childImageSharp.fixed}
@@ -37,8 +37,6 @@ const BlogIndexPage = ({ data: { allMdx, avatar } }) => {
             Mikkel Malmberg
           </a>{" "}
           om computere, software, comedy, arbejde og det at lave ting.
-          Eller&hellip; det handler egentlig bare om de ting, jeg tænker mest
-          på. Og det falder ofte indenfor de kategorier.
         </p>
       </header>
 
