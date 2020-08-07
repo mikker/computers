@@ -36,7 +36,7 @@ const BlogIndexPage = ({ data: { allMdx, avatar } }) => {
           <a href="https://mikkelmalmberg.dk" className="link">
             Mikkel Malmberg
           </a>{" "}
-          om computere, software, comedy, arbejde og det at lave ting.
+          om computere, software og det at lave ting.
         </p>
       </header>
 
